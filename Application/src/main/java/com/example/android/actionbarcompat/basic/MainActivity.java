@@ -16,11 +16,21 @@
 
 package com.example.android.actionbarcompat.basic;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
+
+import java.util.prefs.Preferences;
 
 /**
  * This sample shows you how to use ActionBarCompat to create a basic Activity which displays
@@ -31,10 +41,15 @@ import android.view.MenuItem;
  */
 public class MainActivity extends ActionBarActivity {
 
+    public static final String PREFS_NAME = "MyPrefsFile";
+    EditText name;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sample_main);
+        setContentView(R.layout.activity_main);
+        name = (EditText) findViewById(R.id.nametext);
+
     }
 
     // BEGIN_INCLUDE(create_menu)
@@ -84,4 +99,33 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     // END_INCLUDE(menu_item_selected)
+
+
+    /** Called when the user clicks the Send button */
+    public void menupage(View view) {
+        Log.d("test","test2");
+
+        setname();
+        Log.d("test","aftersetname");
+        Intent intent = new Intent(this, second.class);
+        //EditText editText = (EditText) findViewById(R.id.edit_message);
+        //String message = editText.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+    public void setname(){
+
+        SharedPreferences sharedPreferences =getSharedPreferences("mydata",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor  = sharedPreferences.edit();
+        editor.putString("name",name.getText().toString());
+        editor.commit();
+
+
+
+
+
+
+    }
+
+
 }

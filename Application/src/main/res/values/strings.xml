@@ -15,7 +15,18 @@
   limitations under the License.
 -->
 <resources>
+
     <string name="menu_refresh">Refresh</string>
     <string name="menu_location">Location</string>
     <string name="menu_settings">Settings</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_second">second</string>
+    <string name="myintro_message">Welcome</string>
+    <string name="welcome">Welcome to Score get ready for getting that score</string>
+    <string name="title_activity_points">Points</string>
+    <string name="title_activity_close_list">CloseList</string>
+    <string name="title_activity_resturant">Resturant</string>
+
 </resources>

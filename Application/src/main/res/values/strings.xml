@@ -29,4 +29,18 @@
     <string name="title_activity_close_list">CloseList</string>
     <string name="title_activity_resturant">Resturant</string>
 
+    <string-array name="products">
+        <item>Burger</item>
+        <item>Sasauge </item>
+        <item>Soda</item>
+    </string-array>
+    <string-array name="price">
+        <item>20</item>
+        <item>15 </item>
+        <item>10</item>
+    </string-array>
+
+    <string name="title_activity_buy_conf">BuyConf</string>
+    <string name="title_activity_post_bill">PostBill</string>
+
 </resources>

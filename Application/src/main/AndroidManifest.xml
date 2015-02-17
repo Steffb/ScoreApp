@@ -17,18 +17,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.actionbarcompat.basic"
     android:versionCode="1"
-    android:versionName="1.0" > <!-- ActionBarCompat provides an Action Bar from API v7 onwards -->
+    android:versionName="1.0" >
+
+    <!-- ActionBarCompat provides an Action Bar from API v7 onwards -->
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
-    <uses-sdk android:minSdkVersion="9" />
-
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
@@ -45,7 +37,7 @@
         </activity>
         <activity
             android:name=".second"
-            android:label="@string/title_activity_second"
+            android:label="Menu"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -70,6 +62,22 @@
         <activity
             android:name=".Resturant"
             android:label="@string/title_activity_resturant" >
+        </activity>
+        <activity
+            android:name=".BuyConf"
+            android:label="@string/title_activity_buy_conf"
+            android:parentActivityName=".Resturant" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.actionbarcompat.basic.Resturant" />
+        </activity>
+        <activity
+            android:name=".PostBill"
+            android:label="@string/title_activity_post_bill"
+            android:parentActivityName=".second" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.actionbarcompat.basic.second" />
         </activity>
     </application>
 

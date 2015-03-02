@@ -1,9 +1,11 @@
 package com.example.android.actionbarcompat.basic;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class PostBill extends ActionBarActivity {
@@ -35,5 +37,10 @@ public class PostBill extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void tomenu(View view){
+        Intent intent = new Intent(this,second.class);
+        startActivity(intent);
     }
 }

@@ -30,6 +30,8 @@ import android.view.View;
 import android.widget.EditText;
 
 
+import com.android.volley.toolbox.Volley;
+
 import java.util.prefs.Preferences;
 
 /**
@@ -47,8 +49,12 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        name = (EditText) findViewById(R.id.nametext);
+        //setContentView(R.layout.activity_main);
+       // name = (EditText) findViewById(R.id.nametext);
+
+        //for running faster
+        Intent i = new Intent(this, Network.class);
+        startActivity(i);
 
     }
 

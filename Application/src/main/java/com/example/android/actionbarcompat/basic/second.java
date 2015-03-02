@@ -61,6 +61,12 @@ public class second extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void mymap(View v){
+        Log.d("second","mymap running");
+        Intent intent = new Intent(this, Map.class);
+        startActivity(intent);
+    }
+
     public void seeScore(View v ){
         Intent intent = new Intent(this, Points.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -79,7 +85,10 @@ public class second extends ActionBarActivity {
         return name;
 
     }
-
+    public void toNetwork(View veiw){
+        Intent intent = new Intent(this,Network.class);
+        startActivity(intent);
+    }
     public void process(View view){
 
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
